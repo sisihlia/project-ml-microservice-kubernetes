@@ -29,13 +29,15 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ## Setup the Environment
 
 * Create a virtualenv and activate it
-   1. python3 -m venv ~/.devops
-   2. source ~/.devops/bin/activate
+
+      python3 -m venv ~/.devops
+      source ~/.devops/bin/activate
 
 * Run `make install` to install the necessary dependencies
-   3. make install
-   4. make lint
-   5
+
+      make install
+      make lint
+   
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
@@ -45,20 +47,24 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
-    curl -fsSL https://get.docker.com -o get-docker.sh
-    bash get-docker.sh
+
+       curl -fsSL https://get.docker.com -o get-docker.sh
+       bash get-docker.sh
     
 * Setup and Configure Kubernetes locally
-    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
-    sudo dpkg -i minikube_latest_amd64.deb
-    minikube start --extra-config=kubeadm.ignore-preflight-errors=NumCPU --force --cpus 1 
+
+       curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+       sudo dpkg -i minikube_latest_amd64.deb
+       minikube start --extra-config=kubeadm.ignore-preflight-errors=NumCPU --force --cpus 1 
     
 * Create Flask app in Container
-    minikube kubectl run projectml -- --image=sisihliay/projectml:v1 --port=80
-    minikube kubectl port-forward projectml 8000:80
+
+       minikube kubectl run projectml -- --image=sisihliay/projectml:v1 --port=80
+       minikube kubectl port-forward projectml 8000:80
     
 * Run via kubectl
-    minikube kubectl get pods
+
+      minikube kubectl get pods
 
 
 
