@@ -1,0 +1,20 @@
+(.ml) ubuntu:~/environment/project-ml-microservice-kubernetes (main) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+(.ml) ubuntu:~/environment/project-ml-microservice-kubernetes (main) $ minikube kubectl get pods
+NAME        READY   STATUS    RESTARTS   AGE
+projectml   1/1     Running   0          3m38s
+(.ml) ubuntu:~/environment/project-ml-microservice-kubernetes (main) $ docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED        STATUS         PORTS                                                                                                                                  NAMES
+c2f0bc0b508c   gcr.io/k8s-minikube/kicbase:v0.0.22   "/usr/local/bin/entr…"   10 hours ago   Up 7 minutes   127.0.0.1:49157->22/tcp, 127.0.0.1:49156->2376/tcp, 127.0.0.1:49155->5000/tcp, 127.0.0.1:49154->8443/tcp, 127.0.0.1:49153->32443/tcp   minikube
+
+
+(.ml) ubuntu:~/environment/project-ml-microservice-kubernetes (main) $ minikube kubectl port-forward projectml 8000:80
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
