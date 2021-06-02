@@ -1,7 +1,7 @@
 # project-ml-microservice-kubernetes
 
 
-<include a CircleCI status badge, here>
+![image](https://user-images.githubusercontent.com/8087964/120562960-cabaff80-c407-11eb-81cd-8178cf015695.png)
 
 ## Project Overview
 
