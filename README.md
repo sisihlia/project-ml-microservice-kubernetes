@@ -1,8 +1,8 @@
 # project-ml-microservice-kubernetes
 
 
-![image](https://user-images.githubusercontent.com/8087964/120562960-cabaff80-c407-11eb-81cd-8178cf015695.png)
 
+[![CircleCI](https://circleci.com/gh/sisihlia/project-ml-microservice-kubernetes.svg?style=svg)](https://circleci.com/gh/sisihlia/project-ml-microservice-kubernetes)
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
